@@ -6,16 +6,45 @@
 .hero_info_container {
     display: flex;
     flex-direction: column;
+    flex: 1;
+}
+
+.hero_info_container h1 {
+    margin-bottom: 20px;
+}
+
+.hero_info_container h5 {
+    font-weight: 100;
+}
+
+.hero_info_container button {
+    max-width: 224px;
+    margin-top: 40px;
+}
+
+.hero_info_ratings {
+    margin-top: 40px;
+}
+.hero_info_ratings ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+}
+.hero_info_ratings h4 {
+    margin: 0;
 }
 
 .hero_image_container {
-
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .hero_image_card {
     background-color: #3B3B3B;
     border-radius: 20px;
-
+    max-width: 510px;
 }
 
 .hero_image_card_bottom {
@@ -26,10 +55,6 @@
     align-items: center;
     display: flex;
     margin-top: 10px;
-}
-
-.hero_image_author svg {
-    margin-right: 10px;
 }
 
 .hero_image_author svg rect {

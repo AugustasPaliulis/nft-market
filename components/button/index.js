@@ -1,12 +1,14 @@
-import User from "../../styles/icons/User.svg";
-import Styles from "./Button.module.css";
+import styles from "./Button.module.css";
 
-const Button = ({ className }) => {
+const SIZE = ["big", "medium", "small"];
+
+const Button = ({ className, children, buttonSize }) => {
+  const checkSize = SIZE.includes(buttonSize) ? buttonSize : SIZE[0];
+
   return (
     <>
-      <button className={`${Styles.button} ${className}`}>
-        <User />
-        Sign Up
+      <button className={`${styles.button} ${styles[checkSize]} ${className}`}>
+        {children}
       </button>
     </>
   );

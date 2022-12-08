@@ -7,6 +7,7 @@ import Styles from "./Navbar.module.css";
 import Storefront from "../../styles/icons/Storefront.svg";
 import Hamburger from "../../styles/icons/Hamburger.svg";
 import Close from "../../styles/icons/x-solid.svg";
+import User from "../../styles/icons/User.svg";
 
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -58,13 +59,19 @@ const NavBar = () => {
               }`}
               href="/"
             >
-              <Button />
+              <Button buttonSize="medium">
+                <User className="mg-r-10" />
+                Sign Up
+              </Button>
             </Link>
           </li>
         </ul>
 
         <Link className={Styles.signup} href="/">
-          <Button />
+          <Button buttonSize="medium">
+            <User className="mg-r-10" />
+            Sign Up
+          </Button>
         </Link>
       </nav>
     </header>

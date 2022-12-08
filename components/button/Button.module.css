@@ -4,10 +4,22 @@
     font-size: 16px;
     font-weight: 600;
     display: flex;
-    height: 50px;
+    
     align-items: center;
-    width: 152px;
+    min-width: 152px;
     justify-content: center;
     border-radius: 20px;
     border: none;
+}
+
+.big{
+    height: 72px;
+}
+
+.medium {
+    height: 52px;
+}
+
+.small {
+    height: 46px;
 }

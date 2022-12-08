@@ -36,3 +36,7 @@ h5 {
 ul, h3, h5 {
   margin: 0;
 }
+
+.mg-r-10 {
+  margin-right: 10px;
+}
