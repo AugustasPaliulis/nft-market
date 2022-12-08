@@ -17,6 +17,10 @@ a {
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 67px;
+}
+
 h3 {
   font-size: 38px;
 }

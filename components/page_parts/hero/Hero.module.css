@@ -1,0 +1,38 @@
+.hero_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.hero_info_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero_image_container {
+
+}
+
+.hero_image_card {
+    background-color: #3B3B3B;
+    border-radius: 20px;
+
+}
+
+.hero_image_card_bottom {
+    padding:20px;
+}
+
+.hero_image_author {
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+}
+
+.hero_image_author svg {
+    margin-right: 10px;
+}
+
+.hero_image_author svg rect {
+    width: 24px;
+    height: 24px;
+}
