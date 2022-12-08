@@ -1,11 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../button";
+import { useState } from "react";
 
 import Styles from "./Navbar.module.css";
 import Storefront from "../../styles/icons/Storefront.svg";
+import Hamburger from "../../styles/icons/Hamburger.svg";
+import Close from "../../styles/icons/x-solid.svg";
 
 const NavBar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const handleToggle = () => {
+    setNavbarOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setNavbarOpen(false);
+  };
+
   return (
     <header className={Styles.navbar}>
       <div className={Styles.navbar_logo_container}>
@@ -13,19 +26,44 @@ const NavBar = () => {
         <h4>NFT Marketplace</h4>
       </div>
       <nav className={Styles.navbar_links}>
-        <ul>
+        <button
+          className={`${Styles.desktop_hidden} ${Styles.navbar_hamburger}`}
+          onClick={handleToggle}
+        >
+          {!navbarOpen ? <Hamburger /> : <Close fill="white" />}
+        </button>
+        <ul
+          className={`${Styles.navbar_menu} ${navbarOpen ? Styles.show : null}`}
+        >
           <li>
-            <Link href="/">Marketplace</Link>
+            <Link onClick={() => closeMenu()} href="/">
+              Marketplace
+            </Link>
           </li>
           <li>
-            <Link href="/">Rankings</Link>
+            <Link onClick={() => closeMenu()} href="/">
+              Rankings
+            </Link>
           </li>
           <li>
-            <Link href="/">Connect a wallet</Link>
+            <Link onClick={() => closeMenu()} href="/">
+              Connect a wallet
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => closeMenu()}
+              className={`${Styles.desktop_hidden} ${Styles.signup} ${
+                navbarOpen ? Styles.show : null
+              }`}
+              href="/"
+            >
+              <Button />
+            </Link>
           </li>
         </ul>
 
-        <Link href="/">
+        <Link className={Styles.signup} href="/">
           <Button />
         </Link>
       </nav>
