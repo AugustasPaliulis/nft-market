@@ -17,6 +17,10 @@ a {
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 67px;
+}
+
 h3 {
   font-size: 38px;
 }
@@ -31,4 +35,8 @@ h5 {
 
 ul, h3, h5 {
   margin: 0;
+}
+
+.mg-r-10 {
+  margin-right: 10px;
 }
