@@ -45,6 +45,7 @@
     background-color: #3B3B3B;
     border-radius: 20px;
     max-width: 510px;
+    max-height: 505px;
 }
 
 .hero_image_card_bottom {
@@ -60,4 +61,10 @@
 .hero_image_author svg rect {
     width: 24px;
     height: 24px;
+}
+
+@media screen and (max-width: 974px) {
+    .hero_container {
+        flex-direction: column;
+    }
 }
