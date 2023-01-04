@@ -4,6 +4,10 @@
     height: 100px;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2B2B2B;
 }
 
 .navbar_links {
@@ -87,5 +91,15 @@
         display: flex !important;
         width: 100% !important;
         flex-direction: column !important;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .navbar_logo_container {
+        margin-left: 10px;
+    }
+
+    .navbar_links {
+        margin-right: 10px;
     }
 }

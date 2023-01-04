@@ -59,7 +59,7 @@ const NavBar = () => {
               }`}
               href="/"
             >
-              <Button buttonSize="medium">
+              <Button buttonSize="small">
                 <User className="mg-r-10" />
                 Sign Up
               </Button>
@@ -68,7 +68,7 @@ const NavBar = () => {
         </ul>
 
         <Link className={Styles.signup} href="/">
-          <Button buttonSize="medium">
+          <Button buttonSize="small">
             <User className="mg-r-10" />
             Sign Up
           </Button>
