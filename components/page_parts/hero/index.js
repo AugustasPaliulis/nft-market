@@ -5,8 +5,36 @@ import Button from "../../button";
 import RocketLaunch from "../../../styles/icons/RocketLaunch.svg";
 
 import React from "react";
+import { useState, useCallback, useEffect } from "react";
+
+const useMediaQuery = (width) => {
+  const [targetReached, setTargetReached] = useState(false);
+
+  const updateTarget = useCallback((e) => {
+    if (e.matches) {
+      setTargetReached(true);
+    } else {
+      setTargetReached(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    // Check on mount (callback is not called until a change occurs)
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
 
 const Hero = () => {
+  const isBreakpoint = useMediaQuery(1130);
   return (
     <>
       <div className={`${styles.hero_container}`}>
@@ -16,7 +44,7 @@ const Hero = () => {
             NFT marketplace UI created with Anima for Figma. Collect, buy and
             sell art from more than 20k NFT artists.
           </h5>
-          <Button>
+          <Button buttonSize={isBreakpoint ? "medium" : null}>
             <RocketLaunch className="mg-r-10" />
             Get Started
           </Button>
@@ -37,7 +65,9 @@ const Hero = () => {
         {/* IMAGE OF HERO */}
         <div className={styles.hero_image_container}>
           <div className={styles.hero_image_card}>
-            <HeroImage />
+            <div className={styles.hero_main_image_card}>
+              <HeroImage />
+            </div>
             <div className={styles.hero_image_card_bottom}>
               <h5>Space Walking</h5>
               <div className={styles.hero_image_author}>
