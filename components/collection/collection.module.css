@@ -1,0 +1,35 @@
+
+
+.collection_layout {
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+}
+.big_picture svg{
+    width: 330px;
+    height: 330px;
+    border-radius: 20px;
+}
+
+.small_picture_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.small_picture svg {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+.small_collection_more {
+    width: 100px;
+    height: 100px;
+    background-color: #A259FF;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
