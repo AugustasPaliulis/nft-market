@@ -13,13 +13,13 @@ const Trending = () => {
       </div>
       <div className={styles.collections_container}>
         <div className={styles.seperate_collection}>
-          <Collection />
+          <Collection type="animals" />
         </div>
         <div className={styles.seperate_collection}>
-          <Collection />
+          <Collection type="mushrooms" />
         </div>
         <div className={styles.seperate_collection}>
-          <Collection />
+          <Collection type="disco" />
         </div>
       </div>
     </div>
