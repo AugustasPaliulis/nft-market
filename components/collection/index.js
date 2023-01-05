@@ -17,17 +17,15 @@ import Disco2 from "../../styles/images/disco_collection/second_disco.svg";
 import Disco3 from "../../styles/images/disco_collection/third_disco.svg";
 
 const test = [
-  { key: 1, type: "animals", 0: <Dog />, 1: <Cat />, 2: <Bear /> },
+  { type: "animals", 0: <Dog />, 1: <Cat />, 2: <Bear /> },
   {
-    key: 2,
     type: "mushrooms",
     0: <Mushroom1 />,
     1: <Mushroom2 />,
     2: <Mushroom3 />,
   },
-  { key: 3, type: "disco", 0: <Disco1 />, 1: <Disco2 />, 2: <Disco3 /> },
+  { type: "disco", 0: <Disco1 />, 1: <Disco2 />, 2: <Disco3 /> },
 ];
-const pictures = [<Dog />, <Cat />, <Bear />];
 
 const Collection = ({ type }) => {
   const collectionType = test.find((item) => item.type === type)
