@@ -1,11 +1,9 @@
-.test {
-    display: flex;
-    flex-direction: row;
-}
+
 
 .collection_layout {
     display: flex;
     flex-direction: column;
+    max-width: 330px;
 }
 .big_picture svg{
     width: 330px;
