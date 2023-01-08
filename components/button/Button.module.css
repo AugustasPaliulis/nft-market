@@ -10,6 +10,12 @@
     justify-content: center;
     border-radius: 20px;
     border: none;
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
 }
 
 .big{
