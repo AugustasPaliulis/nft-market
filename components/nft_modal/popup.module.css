@@ -1,27 +1,72 @@
 .overlay {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   position:fixed;
   margin:auto;
   padding:0px;
   text-align:center;
   backdrop-filter: blur(1px);
 }
-.popup_container {
-    width:30%;
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index:100;
-    text-align:center;
-    min-width: 380px;
-    min-height: 380px;
+.modal_container {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:100;
+  text-align:center;
+  display: flex;
+  flex-direction: row;
+  background-color: #313131;
+  border-radius: 20px;
+  max-height: 335px;
 }
 
-.popup_container svg {
-  border-radius: 20px;
-  min-width: 380px;
+.modal_picture_container svg {
+  border-radius: 20px 0 0 20px;
+  width: 335px;
+}
+
+.modal_info_container {
+  padding: 20px;
+  padding-top: 30px;
+  min-width: 374px;
+}
+
+.modal_info_title {
+  text-align: left;
+}
+
+.modal_info_title h4 {
+  margin: 0;
+}
+
+.modal_info_title h5 {
+  font-weight: 100;
+}
+
+.modal_info_button svg {
+  fill: white;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .modal_container {
+    flex-direction: column;
+    width: 335px;
+    max-height:none;
+  }
+
+  .modal_picture_container svg {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .modal_info_container {
+    min-width: unset;
+  }
+
+  .modal_info_title h6 {
+    font-size: 15px;
+  }
 }
