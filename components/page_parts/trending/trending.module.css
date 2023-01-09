@@ -12,6 +12,7 @@
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     margin-right: auto;
     margin-left: auto;
+    row-gap: 20px;
     
     /* display: flex;
     flex-direction: row;
