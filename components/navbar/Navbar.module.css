@@ -28,6 +28,11 @@
 .navbar_links ul li {
     margin-right: 20px;
     font-weight: 600;
+    transition: 0.3s; 
+}
+
+.navbar_links ul li:hover {
+    color: #A259FF;
 }
 
 .navbar_logo_container {
