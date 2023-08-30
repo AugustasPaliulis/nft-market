@@ -5,7 +5,7 @@ import styles from "./popup.module.css";
 import Info from "../../styles/icons/info-solid.svg";
 
 const NftModal = ({ open, close, picture }) => {
-  return null;
+  if (!open) return null;
   return (
     <div
       onClick={() => {
