@@ -23,8 +23,10 @@ const NavBar = () => {
   return (
     <header className={Styles.navbar}>
       <div className={Styles.navbar_logo_container}>
+        <Link href="/">
         <Storefront fill="#A259FF" />
         <h4>NFT Marketplace</h4>
+        </Link>
       </div>
       <nav className={Styles.navbar_links}>
         <button
