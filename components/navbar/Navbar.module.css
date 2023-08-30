@@ -35,7 +35,7 @@
     color: #A259FF;
 }
 
-.navbar_logo_container {
+.navbar_logo_container a{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,7 +58,7 @@
     .navbar {
         height: 54px;
     }
-    .navbar_logo_container h4 {
+    .navbar_logo_container a h4 {
         font-size: 24px;
     }
     /* hidding elements */
@@ -100,7 +100,7 @@
 }
 
 @media screen and (max-width: 545px) {
-    .navbar_logo_container {
+    .navbar_logo_container a{
         margin-left: 10px;
     }
 

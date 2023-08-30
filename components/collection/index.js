@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 import styles from "./collection.module.css";
 import NftModal from "../nft_modal";
@@ -62,30 +63,23 @@ const Collection = ({ type, showModal, setModalPicture }) => {
   return (
     <div className={styles.collection_layout}>
       <div
-        onClick={() => {
-          showModal(true);
-          setModalPicture(collectionType[number]);
-        }}
+        
         className={styles.big_picture}
       >
+        <Link href={{pathname: "/nft", query: {type: type, number: number}}}>
         {collectionType[number]}
+        </Link>
       </div>
       <div className={styles.small_picture_container}>
         {/* SMALL PICTURES */}
         <div
-          onClick={() => {
-            showModal(true);
-            setModalPicture(collectionType[pictureNumbers[0]]);
-          }}
+          
           className={styles.small_picture}
         >
           {collectionType[pictureNumbers[0]]}
         </div>
         <div
-          onClick={() => {
-            showModal(true);
-            setModalPicture(collectionType[pictureNumbers[1]]);
-          }}
+          
           className={styles.small_picture}
         >
           {collectionType[pictureNumbers[1]]}
