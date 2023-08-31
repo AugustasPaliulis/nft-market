@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from 'next/image'
 
 import styles from "./collection.module.css";
 import NftModal from "../nft_modal";
@@ -60,7 +61,6 @@ const Collection = ({ type, showModal, setModalPicture }) => {
   }, []);
   pictureNumbers.splice(number, 1);
 
-  console.log(collectionType[number])
   return (
     <div className={styles.collection_layout}>
       <div
