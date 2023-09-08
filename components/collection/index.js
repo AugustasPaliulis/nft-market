@@ -77,7 +77,7 @@ const Collection = ({ type, showModal, setModalPicture }) => {
           
           className={styles.small_picture}
         >
-          <Link href={{pathname: "/nft", query: {type: type, id: collectionType[number] ? collectionType[number].props.id : null}}}>
+          <Link href={{pathname: "/nft", query: {type: type, id: collectionType[number] ? collectionType[pictureNumbers[0]].props.id : null}}}>
           {collectionType[pictureNumbers[0]]}
           </Link>
         </div>
@@ -85,7 +85,7 @@ const Collection = ({ type, showModal, setModalPicture }) => {
           
           className={styles.small_picture}
         >
-          <Link href={{pathname: "/nft", query: {type: type, id: collectionType[number] ? collectionType[number].props.id : null}}}>
+          <Link href={{pathname: "/nft", query: {type: type, id: collectionType[number] ? collectionType[pictureNumbers[1]].props.id : null}}}>
           {collectionType[pictureNumbers[1]]}
           </Link>
         </div>
