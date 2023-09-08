@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from 'next/image'
 
 import styles from "./collection.module.css";
 import NftModal from "../nft_modal";
@@ -22,27 +23,27 @@ import Disco3 from "../../styles/images/disco_collection/third_disco.svg";
 const collections = [
   {
     type: "animals",
-    0: <Dog />,
-    1: <Cat />,
-    2: <Bear />,
+    0: <Dog id="#0"/>,
+    1: <Cat id="#1"/>,
+    2: <Bear id="#2"/>,
     title: "DSGN Animals",
     authorIcon: <MrFox />,
     authorName: "MrFox",
   },
   {
     type: "mushrooms",
-    0: <Mushroom1 />,
-    1: <Mushroom2 />,
-    2: <Mushroom3 />,
+    0: <Mushroom1 id="#3"/>,
+    1: <Mushroom2 id="#4"/>,
+    2: <Mushroom3 id="#5"/>,
     title: "Magic Mushrooms",
     authorIcon: <Shroomie />,
     authorName: "Shroomie",
   },
   {
     type: "disco",
-    0: <Disco1 />,
-    1: <Disco2 />,
-    2: <Disco3 />,
+    0: <Disco1 id="#6"/>,
+    1: <Disco2 id="#7"/>,
+    2: <Disco3 id="#8"/>,
     title: "Disco Machines",
     authorIcon: <BeKind2Robots />,
     authorName: "BeKind2Robots",
@@ -66,7 +67,7 @@ const Collection = ({ type, showModal, setModalPicture }) => {
         
         className={styles.big_picture}
       >
-        <Link href={{pathname: "/nft", query: {type: type, number: number}}}>
+        <Link href={{pathname: "/nft", query: {type: type, id: collectionType[number] ? collectionType[number].props.id : null}}}>
         {collectionType[number]}
         </Link>
       </div>
@@ -76,13 +77,17 @@ const Collection = ({ type, showModal, setModalPicture }) => {
           
           className={styles.small_picture}
         >
+          <Link href={{pathname: "/nft", query: {type: type, id: collectionType[number] ? collectionType[pictureNumbers[0]].props.id : null}}}>
           {collectionType[pictureNumbers[0]]}
+          </Link>
         </div>
         <div
           
           className={styles.small_picture}
         >
+          <Link href={{pathname: "/nft", query: {type: type, id: collectionType[number] ? collectionType[pictureNumbers[1]].props.id : null}}}>
           {collectionType[pictureNumbers[1]]}
+          </Link>
         </div>
         <div className={styles.small_collection_more}>
           <h5>1025+</h5>

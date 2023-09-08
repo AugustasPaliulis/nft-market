@@ -1,5 +1,37 @@
-const NftPage =() => {
-    return <div>Hello</div>
-}
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+
+import NftInfoPage from "../components/page_parts/nft_info_page";
+
+
+
+const NftPage = () => {
+  const router = useRouter();
+  const [type, setType] = useState();
+  const [nftId, setId] = useState();
+
+  useEffect(() => {
+    if (router.query.type && router.query.id) {
+      setType(router.query.type);
+      setId(router.query.id);
+    } else {
+      router.push("/");
+    }
+  });
+
+
+  if (!router.query.type && !router.query.id) {
+    return (
+      <>
+        <br />
+        <br /> 
+        <br />
+        <div>What u doing??</div>
+      </>
+    );
+  }
+
+  return <div><NftInfoPage type={type} id={nftId}/></div>;
+};
 
 export default NftPage;
