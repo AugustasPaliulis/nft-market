@@ -1,11 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-import MrFox from "../styles/avatars/MrFox.svg";
-import Bear from "../styles/images/animals_collection/bear.svg";
-import Cat from "../styles/images/animals_collection/cat.svg";
-import Dog from "../styles/images/animals_collection/dog.svg";
-import Nft from "../components/nft";
+import NftInfoPage from "../components/page_parts/nft_info_page";
 
 
 
@@ -35,7 +31,7 @@ const NftPage = () => {
     );
   }
 
-  return <div><Nft id={nftId}/></div>;
+  return <div><NftInfoPage type={type} id={nftId}/></div>;
 };
 
 export default NftPage;
