@@ -1,3 +1,131 @@
+.container {
+  display: flex;
+  margin-top: 150px;
+  justify-content: space-between;
+}
+
 .nft_svg {
-    max-width: 200px;
+  max-width: 400px;
+  min-width: 400px;
+  height: auto;
+  flex: 1;
+}
+
+.nft_svg svg {
+  border-radius: 10px;
+}
+
+.info_container {
+  flex: 2;
+  text-align: center;
+}
+
+.info_container .title_container {
+  font-size: 40px;
+  text-align: left;
+  margin-left: 15%;
+}
+
+.info_container .date {
+  color: #858584;
+  text-align: left;
+  margin-left: 15%;
+}
+
+.info_container .description_container {
+  max-width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+}
+
+.info_container .description_container p {
+  font-size: 17px;
+}
+
+.description_dark_text {
+  color: #858584;
+}
+
+.description_buttons_container {
+  display: flex;
+}
+
+.button_container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 295px;
+  min-width: 295px;
+  height: 237px;
+  min-width: 237px;
+  background-color: #3b3b3b;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 15%;
+  transition: all 0.2s ease-in-out;
+}
+
+.button_container:hover {
+  transform: scale(1.009);
+  transition: all 0.2s ease-in-out;
+}
+
+.button {
+  width: 235px;
+}
+
+.collection_button {
+  justify-content: space-evenly;
+  width: 169px;
+  margin-left: 2vw;
+}
+
+.auction_time_container p {
+  font-size: 13px;
+  text-align: left;
+}
+
+.auction_time {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+  .nft_svg {
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .description_buttons_container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .collection_button {
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nft_svg {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 0;
+    width: 300px;
+  }
+
+  .info_container .title_container {
+    margin-left: 15%;
+  }
+
+  .button_container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
