@@ -65,7 +65,7 @@ const NftInfoBlock = ({ type, id }) => {
             <div
               className={`${styles.auction_time_container} ${spaceMono.className}`}
             >
-              <p>Biding hasn't started yet</p>
+              <p>Biding hasn&apos;t started yet</p>
               <div
                 className={`${styles.auction_time} ${spaceMonoHeavy.className}`}
               >
