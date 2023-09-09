@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-import NftInfoPage from "../components/page_parts/nft_info_page";
+import NftInfoBlock from "../components/page_parts/nft_info_page";
 
 
 
@@ -31,7 +31,7 @@ const NftPage = () => {
     );
   }
 
-  return <div><NftInfoPage type={type} id={nftId}/></div>;
+  return <div><NftInfoBlock type={type} id={nftId}/></div>;
 };
 
 export default NftPage;

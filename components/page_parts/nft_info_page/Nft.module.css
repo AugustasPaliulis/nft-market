@@ -1,3 +1,37 @@
+.container {
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-between;
+}
+
 .nft_svg {
-    max-width: 200px;
+  /* max-width: 400px; */
+  min-width: 400px;
+  height: auto;
+  flex: 1;
+}
+
+.nft_svg svg {
+  border-radius: 10px;
+}
+
+.info_container {
+  flex: 2;
+  text-align: center;
+}
+
+.info_container .title_container {
+  font-size: 40px;
+}
+
+.info_container .description_container {
+  max-width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: justify;
+}
+
+.button_container {
+  display: flex;
+  justify-content: space-evenly;
 }
