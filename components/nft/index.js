@@ -45,7 +45,7 @@ const collections = [
 
 // getting NFT based on ID
 
-const Nft = ({ setName, id }) => {
+const Nft = ({ setAuthor, setName, id }) => {
   const findComponentById = (id) => {
     for (const collection in collections) {
       for (const key in collections[collection]) {
@@ -54,6 +54,7 @@ const Nft = ({ setName, id }) => {
           collections[collection][key].props.id === id
         ) {
           setName(collections[collection][key].props.name);
+          setAuthor(collections[collection].authorName);
           return collections[collection][key];
         }
       }

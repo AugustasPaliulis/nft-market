@@ -1,31 +1,40 @@
 .button {
-    background-color: #A259FF;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    display: flex;
-    
-    align-items: center;
-    min-width: 152px;
-    justify-content: center;
-    border-radius: 20px;
-    border: none;
-    transition: transform 0.2s;
+  background-color: #a259ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+
+  align-items: center;
+  min-width: 152px;
+  justify-content: center;
+  border-radius: 20px;
+  border: none;
+  transition: transform 0.2s;
+  cursor: pointer;
 }
 
 .button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
 }
 
-.big{
-    height: 72px;
+.big {
+  height: 72px;
 }
 
 .medium {
-    height: 58px;
+  height: 58px;
 }
 
 .small {
-    height: 52px;
+  height: 52px;
+}
+
+.disabled {
+  background-color: #999999;
+  color: #666666;
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.6;
 }
