@@ -47,11 +47,17 @@
   color: #858584;
 }
 
+.description_buttons_container {
+  display: flex;
+}
+
 .button_container {
   display: flex;
   justify-content: space-evenly;
   width: 295px;
+  min-width: 295px;
   height: 237px;
+  min-width: 237px;
   background-color: #3b3b3b;
   border-radius: 20px;
   display: flex;
@@ -59,10 +65,22 @@
   justify-content: space-around;
   align-items: center;
   margin-left: 15%;
+  transition: all 0.2s ease-in-out;
+}
+
+.button_container:hover {
+  transform: scale(1.009);
+  transition: all 0.2s ease-in-out;
 }
 
 .button {
   width: 235px;
+}
+
+.collection_button {
+  justify-content: space-evenly;
+  width: 169px;
+  margin-left: 2vw;
 }
 
 .auction_time_container p {
@@ -79,6 +97,17 @@
     flex-direction: column;
   }
   .nft_svg {
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .description_buttons_container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .collection_button {
     margin-left: 15%;
   }
 }

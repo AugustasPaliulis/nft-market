@@ -5,6 +5,7 @@ import { Work_Sans, Space_Mono } from "next/font/google";
 
 import Nft from "../../nft";
 import Button from "../../button";
+import ArrowRight from "../../../styles/icons/ArrowRight.svg";
 
 const workSans = Work_Sans({
   weight: "300",
@@ -59,20 +60,30 @@ const NftInfoBlock = ({ type, id }) => {
             malesuada eget aliquet id, semper at magna.
           </p>
         </div>
-        <div className={styles.button_container}>
-          <div
-            className={`${styles.auction_time_container} ${spaceMono.className}`}
-          >
-            <p>Biding hasn't started yet</p>
+        <div className={styles.description_buttons_container}>
+          <div className={styles.button_container}>
             <div
-              className={`${styles.auction_time} ${spaceMonoHeavy.className}`}
+              className={`${styles.auction_time_container} ${spaceMono.className}`}
             >
-              {" "}
-              00:00:00
+              <p>Biding hasn't started yet</p>
+              <div
+                className={`${styles.auction_time} ${spaceMonoHeavy.className}`}
+              >
+                {" "}
+                00:00:00
+              </div>
             </div>
+            <Button disabled className={styles.button} buttonSize="medium">
+              Place bid
+            </Button>
           </div>
-          <Button disabled className={styles.button} buttonSize="medium">
-            Place bid
+          <Button
+            className={styles.collection_button}
+            buttonStyle="outline"
+            buttonSize="small"
+          >
+            <ArrowRight />
+            Go to collection
           </Button>
         </div>
       </div>

@@ -14,6 +14,27 @@
   cursor: pointer;
 }
 
+.outline {
+  background-color: transparent;
+  border: solid #a259ff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+
+  align-items: center;
+  min-width: 152px;
+  justify-content: center;
+  border-radius: 50px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.outline:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+}
+
 .button:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
