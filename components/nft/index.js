@@ -89,6 +89,7 @@ const Nft = ({ setAuthor, setName, id, type }) => {
       : collections[0];
     const collection = collectionType.nfts.map((item) => (
       <Link
+        key={item.key}
         href={{ pathname: "/nft", query: { type: type, id: item.props.id } }}
       >
         <div className={styles.nft_collection_container} key={item.props.id}>
