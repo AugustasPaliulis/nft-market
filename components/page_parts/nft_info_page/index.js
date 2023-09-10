@@ -6,6 +6,7 @@ import { Work_Sans, Space_Mono } from "next/font/google";
 import Nft from "../../nft";
 import Button from "../../button";
 import ArrowRight from "../../../styles/icons/ArrowRight.svg";
+import Link from "next/link";
 
 const workSans = Work_Sans({
   weight: "300",
@@ -77,14 +78,16 @@ const NftInfoBlock = ({ type, id }) => {
               Place bid
             </Button>
           </div>
-          <Button
-            className={styles.collection_button}
-            buttonStyle="outline"
-            buttonSize="small"
-          >
-            <ArrowRight />
-            Go to collection
-          </Button>
+          <Link href={{ pathname: "/collection", query: { type: type } }}>
+            <Button
+              className={styles.collection_button}
+              buttonStyle="outline"
+              buttonSize="small"
+            >
+              <ArrowRight />
+              Go to collection
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
