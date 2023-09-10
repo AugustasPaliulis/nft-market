@@ -86,24 +86,34 @@ const Nft = ({ setAuthor, setName, id, type }) => {
   const findComponentsByType = (type) => {
     const collectionType = collections.find((item) => item.type === type)
       ? collections.find((item) => item.type === type)
-      : collections[0];
-    const collection = collectionType.nfts.map((item) => (
-      <Link
-        key={item.key}
-        href={{ pathname: "/nft", query: { type: type, id: item.props.id } }}
-      >
-        <div className={styles.nft_collection_container} key={item.props.id}>
-          {item}
-          <div className={styles.nft_info_title_container}>
-            <p className={workSans.className}>{item.props.name}</p>
-          </div>
-          <div className={styles.nft_info_author_continer}>
-            {collectionType.authorIcon}
-            <p className={workSans.className}>{collectionType.authorName}</p>
-          </div>
-        </div>
-      </Link>
-    ));
+      : null;
+    const collection = collectionType
+      ? collectionType.nfts.map((item) => (
+          <Link
+            key={item.key}
+            href={{
+              pathname: "/nft",
+              query: { type: type, id: item.props.id },
+            }}
+          >
+            <div
+              className={styles.nft_collection_container}
+              key={item.props.id}
+            >
+              {item}
+              <div className={styles.nft_info_title_container}>
+                <p className={workSans.className}>{item.props.name}</p>
+              </div>
+              <div className={styles.nft_info_author_continer}>
+                {collectionType.authorIcon}
+                <p className={workSans.className}>
+                  {collectionType.authorName}
+                </p>
+              </div>
+            </div>
+          </Link>
+        ))
+      : null;
     return collection;
   };
 
