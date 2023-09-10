@@ -1,0 +1,36 @@
+.nft_collection_container {
+  min-height: 100%;
+  background-color: #3b3b3b;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nft_collection_container:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.nft_info_title_container p {
+  margin-bottom: 10px;
+}
+
+.nft_info_author_continer {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.nft_info_author_continer svg {
+  width: 30px;
+}
+
+.nft_info_author_continer p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.nft_collection_container p {
+  margin-left: 10px;
+  margin-top: 5px;
+}

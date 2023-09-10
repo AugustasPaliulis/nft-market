@@ -1,0 +1,18 @@
+.collection_title_container {
+  margin-top: 100px;
+  text-transform: capitalize;
+  font-size: 50px;
+}
+.collection_container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collection_container div svg {
+  border-radius: 20px 20px 0 0;
+  transition: all 0.2s ease-in-out;
+}
