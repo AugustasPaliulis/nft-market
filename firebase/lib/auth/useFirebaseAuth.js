@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import Firebase from "../../config";
+import { useRouter } from "next/router";
+import firebase from "../../config";
 
 const formatAuthUser = (user) => ({
   uid: user.uid,
@@ -9,7 +10,7 @@ const formatAuthUser = (user) => ({
 export default function useFirebaseAuth() {
   const [authUser, setAuthUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const router = useRouter();
   const authStateChanged = async (authState) => {
     if (!authState) {
       setAuthUser(null);
@@ -23,8 +24,25 @@ export default function useFirebaseAuth() {
     setLoading(false);
   };
 
+  const clear = () => {
+    setAuthUser(null);
+    setLoading(true);
+  };
+
+  const signInWithEmailAndPassword = (email, password) => {
+    return firebase.auth().signInWithEmailAndPassword(email, password);
+  };
+
+  const createUserWithEmailAndPassword = (email, password) => {
+    return firebase.auth().createUserWithEmailAndPassword(email, password);
+  };
+
+  const signOut = () => {
+    firebase.auth().signOut().then(clear);
+  };
+
   useEffect(() => {
-    const unsubscribe = Firebase.auth().onAuthStateChanged(authStateChanged);
+    const unsubscribe = firebase.auth().onAuthStateChanged(authStateChanged);
 
     return () => unsubscribe();
   }, []);
@@ -32,5 +50,8 @@ export default function useFirebaseAuth() {
   return {
     authUser,
     loading,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    signOut,
   };
 }

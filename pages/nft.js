@@ -2,11 +2,21 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
 import NftInfoBlock from "../components/page_parts/nft_info_page";
+import { useAuth } from "../context/AuthUserContext";
 
 const NftPage = () => {
+  const { authUser, loading } = useAuth();
+
   const router = useRouter();
   const [type, setType] = useState();
   const [nftId, setId] = useState();
+
+  useEffect(() => {
+    if (!loading && !authUser) {
+      console.log("Log in please");
+      router.push("/");
+    }
+  }, [authUser, loading]);
 
   useEffect(() => {
     if (router.query.type && router.query.id) {

@@ -1,7 +1,7 @@
-import Firebase from "Firebase/app";
-import "Firebase/auth";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
 
-const FirebaseCredentials = {
+const firebaseCredentials = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
   projectID: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
@@ -10,8 +10,8 @@ const FirebaseCredentials = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-if (!Firebase.Apps.length) {
-  Firebase.initializeApp(FirebaseCredentials);
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseCredentials);
 }
 
-export default Firebase;
+export default firebase;

@@ -5,6 +5,9 @@ import useFirebaseAuth from "../firebase/lib/auth/useFirebaseAuth";
 const authUserContext = createContext({
   authUser: null,
   loading: true,
+  signInWithEmailAndPassword: async () => {},
+  createUserWithEmailAndPassword: async () => {},
+  signOut: async () => {},
 });
 
 export function AuthUserProvider({ children }) {
