@@ -26,7 +26,7 @@ export default function useFirebaseAuth() {
 
   const clear = () => {
     setAuthUser(null);
-    setLoading(true);
+    setLoading(false);
   };
 
   const signInWithEmailAndPassword = (email, password) => {
@@ -40,10 +40,9 @@ export default function useFirebaseAuth() {
   const signOut = () => {
     firebase.auth().signOut().then(clear);
   };
-
+  //useEffect nemato state'o pasikeitimo po signOut!!!
   useEffect(() => {
     const unsubscribe = firebase.auth().onAuthStateChanged(authStateChanged);
-
     return () => unsubscribe();
   }, []);
 
