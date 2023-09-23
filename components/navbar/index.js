@@ -8,6 +8,7 @@ import Storefront from "../../styles/icons/Storefront.svg";
 import Hamburger from "../../styles/icons/Hamburger.svg";
 import Close from "../../styles/icons/x-solid.svg";
 import User from "../../styles/icons/User.svg";
+import { useAuth } from "../../context/AuthUserContext";
 
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -20,12 +21,14 @@ const NavBar = () => {
     setNavbarOpen(false);
   };
 
+  const { authUser, signOut } = useAuth();
+
   return (
     <header className={Styles.navbar}>
       <div className={Styles.navbar_logo_container}>
         <Link href="/">
-        <Storefront fill="#A259FF" />
-        <h4>NFT Marketplace</h4>
+          <Storefront fill="#A259FF" />
+          <h4>NFT Marketplace</h4>
         </Link>
       </div>
       <nav className={Styles.navbar_links}>
@@ -70,9 +73,9 @@ const NavBar = () => {
         </ul>
 
         <Link className={Styles.signup} href="/">
-          <Button buttonSize="small">
+          <Button onClick={authUser ? signOut : null} buttonSize="small">
             <User className="mg-r-10" />
-            Sign Up
+            {authUser ? "Sign Out" : "Sign Up"}
           </Button>
         </Link>
       </nav>

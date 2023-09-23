@@ -11,6 +11,7 @@ const Button = ({
   disabled,
   buttonStyle,
   type,
+  onClick,
 }) => {
   const checkSize = SIZE.includes(buttonSize) ? buttonSize : SIZE[0];
 
@@ -21,6 +22,7 @@ const Button = ({
   return (
     <>
       <button
+        onClick={onClick}
         type={type}
         className={`${styles[checkStyle]} ${styles[checkSize]} ${className} ${styles[disabledButton]}`}
       >
