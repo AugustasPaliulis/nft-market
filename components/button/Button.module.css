@@ -52,6 +52,11 @@
   height: 52px;
 }
 
+.extra_small {
+  height: 38px;
+  font-weight: 400;
+}
+
 .disabled {
   background-color: #999999;
   color: #666666;
