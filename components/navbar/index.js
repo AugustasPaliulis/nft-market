@@ -51,18 +51,20 @@ const NavBar = () => {
               Rankings
             </Link>
           </li>
-          <li>
-            <Link onClick={() => closeMenu()} href="/">
-              Connect a wallet
-            </Link>
-          </li>
+          {authUser ? null : (
+            <li>
+              <Link onClick={() => closeMenu()} href="/auth/sign_in">
+                Sign In
+              </Link>
+            </li>
+          )}
           <li>
             <Link
               onClick={() => closeMenu()}
               className={`${Styles.desktop_hidden} ${Styles.signup} ${
                 navbarOpen ? Styles.show : null
               }`}
-              href="/"
+              href="/auth/sign_up"
             >
               <Button buttonSize="small">
                 <User className="mg-r-10" />
@@ -71,13 +73,30 @@ const NavBar = () => {
             </Link>
           </li>
         </ul>
-
-        <Link className={Styles.signup} href="/">
-          <Button onClick={authUser ? signOut : null} buttonSize="small">
-            <User className="mg-r-10" />
-            {authUser ? "Sign Out" : "Sign Up"}
-          </Button>
-        </Link>
+        {authUser ? (
+          <div className={Styles.email_container}>
+            <div className={Styles.email}>
+              <User className="mg-r-10" />
+              {authUser.email}
+            </div>
+            <div className={Styles.dropdown_container}>
+              <Button
+                onClick={authUser ? signOut : null}
+                buttonStyle="outline"
+                buttonSize="extra_small"
+              >
+                Sign Out
+              </Button>
+            </div>
+          </div>
+        ) : (
+          <Link className={Styles.signup} href="/auth/sign_up">
+            <Button onClick={authUser ? signOut : null} buttonSize="small">
+              <User className="mg-r-10" />
+              {authUser ? "Sign Out" : "Sign Up"}
+            </Button>
+          </Link>
+        )}
       </nav>
     </header>
   );

@@ -1,6 +1,6 @@
 import styles from "./Button.module.css";
 
-const SIZE = ["big", "medium", "small"];
+const SIZE = ["big", "medium", "small", "extra_small"];
 
 const STYLE = ["button", "outline"];
 

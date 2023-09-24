@@ -47,6 +47,36 @@
   display: none;
 }
 
+.email_container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.email_container:hover {
+  color: #a259ff;
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown_container {
+  display: none;
+}
+
+.email_container:hover .email {
+  display: none;
+}
+
+.email_container:hover .dropdown_container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 974px) {
   .desktop_hidden {
     display: block;
