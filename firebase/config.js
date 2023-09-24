@@ -2,12 +2,12 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
 const firebaseCredentials = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectID: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGIN_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  apiKey: "AIzaSyCHPJZfi2paZA8SS2yMn7mt16un2MyFUlA",
+  authDomain: "nft-marketplace-108fe.firebaseapp.com",
+  projectID: "nft-marketplace-108fe",
+  storageBucket: "nft-marketplace-108fe.appspot.com",
+  messagingSenderId: "631266110542",
+  appId: "1:631266110542:web:4e47e11baed20ba4e9a71f",
 };
 
 if (!firebase.apps.length) {
