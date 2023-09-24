@@ -33,7 +33,6 @@
 .outline:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-  color: #a259ff;
 }
 
 .button:hover {
@@ -55,6 +54,7 @@
 
 .extra_small {
   height: 38px;
+  font-weight: 400;
 }
 
 .disabled {

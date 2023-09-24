@@ -14,7 +14,7 @@ const NftPage = () => {
   useEffect(() => {
     if (!loading && !authUser) {
       console.log("Log in please");
-      router.push("/");
+      router.push({ pathname: "/auth/sign_up", query: { showAlert: "true" } });
     }
   }, [authUser, loading]);
 

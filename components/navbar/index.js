@@ -58,23 +58,45 @@ const NavBar = () => {
               </Link>
             </li>
           )}
-          <li>
-            <Link
-              onClick={() => closeMenu()}
-              className={`${Styles.desktop_hidden} ${Styles.signup} ${
-                navbarOpen ? Styles.show : null
-              }`}
-              href="/auth/sign_up"
-            >
-              <Button buttonSize="small">
-                <User className="mg-r-10" />
-                Sign Up
-              </Button>
-            </Link>
+          <li className={` ${Styles.email_list} ${Styles.desktop_hidden}`}>
+            {authUser ? (
+              <div
+                className={` ${Styles.email_container} ${
+                  Styles.desktop_hidden
+                } ${Styles.signup} ${navbarOpen ? Styles.show : null}`}
+              >
+                <div className={Styles.email}>
+                  <User className="mg-r-10" />
+                  {authUser.email}
+                </div>
+                <div className={Styles.dropdown_container}>
+                  <Button
+                    onClick={authUser ? signOut : null}
+                    buttonStyle="outline"
+                    buttonSize="extra_small"
+                  >
+                    Sign Out
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <Link
+                onClick={() => closeMenu()}
+                className={`${Styles.desktop_hidden} ${Styles.signup} ${
+                  navbarOpen ? Styles.show : null
+                }`}
+                href="/auth/sign_up"
+              >
+                <Button buttonSize="small">
+                  <User className="mg-r-10" />
+                  Sign Up
+                </Button>
+              </Link>
+            )}
           </li>
         </ul>
         {authUser ? (
-          <div className={Styles.email_container}>
+          <div className={` ${Styles.email_container} ${Styles.signup}`}>
             <div className={Styles.email}>
               <User className="mg-r-10" />
               {authUser.email}
