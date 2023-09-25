@@ -42,15 +42,11 @@ const NavBar = () => {
           className={`${Styles.navbar_menu} ${navbarOpen ? Styles.show : null}`}
         >
           <li>
-            <Link onClick={() => closeMenu()} href="/">
-              Marketplace
+            <Link onClick={() => closeMenu()} href="#trending">
+              Trending
             </Link>
           </li>
-          <li>
-            <Link onClick={() => closeMenu()} href="/">
-              Rankings
-            </Link>
-          </li>
+
           {authUser ? null : (
             <li>
               <Link onClick={() => closeMenu()} href="/auth/sign_in">

@@ -20,7 +20,7 @@ const Trending = () => {
   };
   return (
     <>
-      <div className={styles.trending}>
+      <div id="trending" className={styles.trending}>
         <div className={styles.title_container}>
           <h3>Trending Collection</h3>
           <h5>Checkout our weekly updated trending collection.</h5>

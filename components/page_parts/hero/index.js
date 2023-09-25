@@ -6,6 +6,7 @@ import RocketLaunch from "../../../styles/icons/RocketLaunch.svg";
 
 import React from "react";
 import { useState, useCallback, useEffect } from "react";
+import Link from "next/link";
 
 const useMediaQuery = (width) => {
   const [targetReached, setTargetReached] = useState(false);
@@ -44,10 +45,12 @@ const Hero = () => {
             NFT marketplace UI created with Anima for Figma. Collect, buy and
             sell art from more than 20k NFT artists.
           </h5>
-          <Button buttonSize={isBreakpoint ? "medium" : null}>
-            <RocketLaunch className="mg-r-10" />
-            Get Started
-          </Button>
+          <Link href="/auth/sign_up">
+            <Button buttonSize={isBreakpoint ? "medium" : null}>
+              <RocketLaunch className="mg-r-10" />
+              Get Started
+            </Button>
+          </Link>
           <div className={styles.hero_info_ratings}>
             <ul>
               <li>
