@@ -42,7 +42,7 @@ const NavBar = () => {
           className={`${Styles.navbar_menu} ${navbarOpen ? Styles.show : null}`}
         >
           <li>
-            <Link onClick={() => closeMenu()} href="#trending">
+            <Link onClick={() => closeMenu()} href="/#trending">
               Trending
             </Link>
           </li>
