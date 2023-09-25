@@ -1,142 +1,139 @@
 .hero_container {
-    display: flex;
-    flex-direction: row;
-    padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
 }
 
 .hero_info_container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .hero_info_container h1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .hero_info_container h5 {
-    font-weight: 100;
+  font-weight: 100;
 }
 
-.hero_info_container button {
-    max-width: 224px;
-    margin-top: 40px;
+.hero_info_container a button {
+  width: 224px;
+  margin-top: 40px;
 }
 
 .hero_info_ratings {
-    margin-top: 40px;
+  margin-top: 40px;
 }
-.hero_info_ratings ul{
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 50px;
+.hero_info_ratings ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 50px;
 }
 .hero_info_ratings h4 {
-    margin: 0;
+  margin: 0;
 }
 
 .hero_image_container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero_image_card {
-    background-color: #3B3B3B;
-    border-radius: 20px;
-    max-width: 510px;
-    max-height: 505px;
+  background-color: #3b3b3b;
+  border-radius: 20px;
+  max-width: 510px;
+  max-height: 505px;
 }
 
 .hero_image_card .hero_main_image_card svg {
-    width: 510px;
-    height: 401px;
+  width: 510px;
+  height: 401px;
 }
 
 .hero_image_card_bottom {
-    padding:20px;
+  padding: 20px;
 }
 
 .hero_image_author {
-    align-items: center;
-    display: flex;
-    margin-top: 10px;
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
 }
 
 .hero_image_author svg rect {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 @media screen and (max-width: 1130px) {
+  .hero_info_container h1 {
+    font-size: 55px;
+  }
 
-    .hero_info_container h1 {
-        font-size: 55px;
-    }
-
-    .hero_image_card {
-        width: 410px;
-        height: 424px;
-    }
-    .hero_image_card .hero_main_image_card svg {
-        width: 410px;
-        height: 323px;
-    }
+  .hero_image_card {
+    width: 410px;
+    height: 424px;
+  }
+  .hero_image_card .hero_main_image_card svg {
+    width: 410px;
+    height: 323px;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    
-    .hero_container {
-        flex-direction: column;
-    }
+  .hero_container {
+    flex-direction: column;
+  }
 
-    .hero_image_container {
-        margin-top: 30px;
-    }
+  .hero_image_container {
+    margin-top: 30px;
+  }
 
-    .hero_image_card {
-        width: 510px;
-        height: 505px;
-    }
-    .hero_image_card .hero_main_image_card svg {
-        width: 510px;
-        height: 401px;
-    }
+  .hero_image_card {
+    width: 510px;
+    height: 505px;
+  }
+  .hero_image_card .hero_main_image_card svg {
+    width: 510px;
+    height: 401px;
+  }
 }
 
 @media screen and (max-width: 545px) {
-    
-    .hero_container {
-        flex-direction: column;
-    }
-    .hero_info_container h1 {
-        font-size: 42px;
-    }
+  .hero_container {
+    flex-direction: column;
+  }
+  .hero_info_container h1 {
+    font-size: 42px;
+  }
 
-    .hero_info_container h4 {
-        font-size: 23px;
-    }
+  .hero_info_container h4 {
+    font-size: 23px;
+  }
 
-    .hero_info_container h5 {
-        font-size: 18px;
-    }
+  .hero_info_container h5 {
+    font-size: 18px;
+  }
 
-    .hero_info_ratings ul {
-        justify-content: center;
-    }
+  .hero_info_ratings ul {
+    justify-content: center;
+  }
 
-    .hero_image_container {
-        margin-top: 30px;
-    }
+  .hero_image_container {
+    margin-top: 30px;
+  }
 
-    .hero_image_card {
-        width: 330px;
-        height: 360px;
-    }
-    .hero_image_card .hero_main_image_card svg {
-        width: 330px;
-        height: 260px;
-    }
+  .hero_image_card {
+    width: 330px;
+    height: 360px;
+  }
+  .hero_image_card .hero_main_image_card svg {
+    width: 330px;
+    height: 260px;
+  }
 }
